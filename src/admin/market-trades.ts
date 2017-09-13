@@ -76,20 +76,18 @@ var MarketTradeGrid = ($scope: MarketTradeScope,
         enableColumnResize: true,
         sortInfo: { fields: ['time'], directions: ['desc'] },
         columnDefs: [
-            { width: 80, field: 'time', displayName: 't', cellFilter: "momentShortDate",
-                sortingAlgorithm: Shared.fastDiff,
-                sort: { direction: uiGridConstants.DESC, priority: 1} },
-            { width: 50, field: 'price', displayName: 'px' },
-            { width: 40, field: 'size', displayName: 'sz' },
-            { width: 40, field: 'make_side', displayName: 'ms' },
-            { width: 40, field: 'qBz', displayName: 'qBz' },
-            { width: 50, field: 'qB', displayName: 'qB' },
-            { width: 50, field: 'qA', displayName: 'qA' },
-            { width: 40, field: 'qAz', displayName: 'qAz' },
-            { width: 40, field: 'mBz', displayName: 'mBz' },
-            { width: 50, field: 'mB', displayName: 'mB' },
-            { width: 50, field: 'mA', displayName: 'mA' },
-            { width: 40, field: 'mAz', displayName: 'mAz' }
+            { width: 80, field: 'time', displayName: 'Time', cellFilter: "momentShortDate", sortingAlgorithm: Shared.fastDiff, sort: { direction: uiGridConstants.DESC, priority: 1} },
+            { width: 50, field: 'price', displayName: 'Price' },
+            { width: 65, field: 'size', displayName: 'Size' },
+            { width: 45, field: 'make_side', displayName: 'Side' },
+			{ width: 65, field: 'qBz', displayName: 'Q BidSz' },
+            { width: 55, field: 'qB', displayName: 'Q Bid' },
+            { width: 55, field: 'qA', displayName: 'Q Ask' },
+            { width: 65, field: 'qAz', displayName: 'Q AskSz' },
+            { width: 65, field: 'mBz', displayName: 'T BidSz' },
+            { width: 50, field: 'mB', displayName: 'T Bid' },
+            { width: 50, field: 'mA', displayName: 'T Ask' },
+            { width: 70, field: 'mAz', displayName: 'T AskSz' }
         ]
     };
 

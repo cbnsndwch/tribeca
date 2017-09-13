@@ -53,12 +53,12 @@ var TradesListController = ($scope : TradesScope, $log : ng.ILogService, subscri
         rowHeight: 20,
         headerRowHeight: 20,
         columnDefs: [
-            {width: 80, field:'time', displayName:'t', cellFilter: 'momentShortDate',
+            {width: 80, field:'time', displayName:'Time', cellFilter: 'momentShortDate',
                 sortingAlgorithm: Shared.fastDiff,
                 sort: { direction: uiGridConstants.DESC, priority: 1} },
-            {width: 55, field:'price', displayName:'px' },
-            {width: 50, field:'quantity', displayName:'qty'},
-            {width: 30, field:'side', displayName:'side', cellClass: (grid, row, col, rowRenderIndex, colRenderIndex) => {
+            {width: 55, field:'price', displayName:'Price' },
+            {width: 50, field:'quantity', displayName:'Quantity'},
+            {width: 30, field:'side', displayName:'Market Side', cellClass: (grid, row, col, rowRenderIndex, colRenderIndex) => {
                 if (grid.getCellValue(row, col) === 'B') {
                     return 'buy';
                 }
@@ -69,8 +69,8 @@ var TradesListController = ($scope : TradesScope, $log : ng.ILogService, subscri
                     return "unknown";
                 }
             }},
-            {width: 30, field:'liquidity', displayName:'liq'},
-            {width: 60, field:'value', displayName:'val', cellFilter: 'currency:"$":3'}
+            {width: 30, field:'liquidity', displayName:'Liquidity'},
+            {width: 60, field:'value', displayName:'Value', cellFilter: 'currency:"$":3'}
         ]
     };
 
